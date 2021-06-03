@@ -1,0 +1,146 @@
+<!-- Sorting an Array
+The sort() method sorts an array alphabetically:
+
+Example -->
+
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2>JavaScript Array Sort</h2>
+
+    <p>The sort() method sorts an array alphabetically.</p>
+
+    <button onclick="myFunction()">Try it</button>
+
+    <p id="demo"></p>
+
+    <script>
+      var fruits = ["Banana", "Orange", "Apple", "Mango"];
+      document.getElementById("demo").innerHTML = fruits;
+
+      function myFunction() {
+        fruits.sort();
+        document.getElementById("demo").innerHTML = fruits;
+      }
+    </script>
+  </body>
+</html>
+
+<!-- Reversing an Array
+The reverse() method reverses the elements in an array.
+
+You can use it to sort an array in descending order:
+
+Example -->
+
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2>JavaScript Array Sort Reverse</h2>
+
+    <p>The reverse() method reverses the elements in an array.</p>
+    <p>
+      By combining sort() and reverse() you can sort an array in descending
+      order.
+    </p>
+    <button onclick="myFunction()">Try it</button>
+
+    <p id="demo"></p>
+
+    <script>
+      // Create and display an array:
+      var fruits = ["Banana", "Orange", "Apple", "Mango"];
+      document.getElementById("demo").innerHTML = fruits;
+
+      function myFunction() {
+        // First sort the array
+        fruits.sort();
+        // Then reverse it:
+        fruits.reverse();
+        document.getElementById("demo").innerHTML = fruits;
+      }
+    </script>
+  </body>
+</html>
+
+<!-- The Compare Function
+The purpose of the compare function is to define an alternative sort order.
+
+The compare function should return a negative, zero, or positive value, depending on the arguments: -->
+
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2>JavaScript Array Sort</h2>
+
+    <p>Click the buttons to sort the array alphabetically or numerically.</p>
+
+    <button onclick="myFunction1()">Sort Alphabetically</button>
+    <button onclick="myFunction2()">Sort Numerically</button>
+
+    <p id="demo"></p>
+
+    <script>
+      var points = [40, 100, 1, 5, 25, 10];
+      document.getElementById("demo").innerHTML = points;
+
+      function myFunction1() {
+        points.sort();
+        document.getElementById("demo").innerHTML = points;
+      }
+      function myFunction2() {
+        points.sort(function (a, b) {
+          return a - b;
+        });
+        document.getElementById("demo").innerHTML = points;
+      }
+    </script>
+  </body>
+</html>
+
+<!-- Find the Highest (or Lowest) Array Value
+There are no built-in functions for finding the max or min value in an array.
+
+However, after you have sorted an array, you can use the index to obtain the highest and lowest values.
+
+Sorting ascending:
+
+Example -->
+
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2>JavaScript Array Sort</h2>
+
+    <p>The lowest number is <span id="demo">.</span>.</p>
+
+    <script>
+      var points = [40, 100, 1, 5, 25, 10];
+      points.sort(function (a, b) {
+        return a - b;
+      });
+      document.getElementById("demo").innerHTML = points[0];
+    </script>
+  </body>
+</html>
+
+<!-- highestvalue -->
+
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2>JavaScript Array Sort</h2>
+
+    <p>The highest number is <span id="demo"></span>.</p>
+
+    <script>
+      var points = [40, 100, 1, 5, 25, 10];
+      points.sort(function (a, b) {
+        return b - a;
+      });
+      document.getElementById("demo").innerHTML = points[0];
+    </script>
+  </body>
+</html>
+
+ 

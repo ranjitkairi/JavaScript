@@ -1,0 +1,71 @@
+<!-- JavaScript Class Syntax
+Use the keyword class to create a class.
+
+Always add a method named constructor():
+
+Syntax -->
+
+<!-- Using a Class
+When you have a class, you can use the class to create objects:
+
+Example -->
+
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2>JavaScript Class</h2>
+
+    <p>How to use a JavaScript Class.</p>
+
+    <p id="demo"></p>
+
+    <script>
+      class Car {
+        constructor(name, year) {
+          this.name = name;
+          this.year = year;
+        }
+      }
+
+      myCar = new Car("Ford", 2014);
+      document.getElementById("demo").innerHTML = myCar.name + " " + myCar.year;
+    </script>
+  </body>
+</html>
+
+<!-- Class Methods
+Class methods are created with the same syntax as object methods.
+
+Use the keyword class to create a class.
+
+Always add a constructor() method.
+
+Then add any number of methods. -->
+
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2>JavaScript Class Method</h2>
+
+    <p>How to define and use a Class method.</p>
+
+    <p id="demo"></p>
+
+    <script>
+      class Car {
+        constructor(name, year) {
+          this.name = name;
+          this.year = year;
+        }
+        age() {
+          let date = new Date();
+          return date.getFullYear() - this.year;
+        }
+      }
+
+      let myCar = new Car("Ford", 2014);
+      document.getElementById("demo").innerHTML =
+        "My car is " + myCar.age() + " years old.";
+    </script>
+  </body>
+</html>

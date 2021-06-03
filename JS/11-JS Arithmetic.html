@@ -1,0 +1,195 @@
+<!-- Arithmetic Operations
+A typical arithmetic operation operates on two numbers.
+
+The two numbers can be literals:
+
+Example -->
+
+<!DOCTYPE html>
+<html>
+  <body>
+    <p>
+      A typical arithmetic operation takes two numbers and produces a new
+      number.
+    </p>
+
+    <p id="demo"></p>
+
+    <script>
+      var x = 100 + 50;
+      document.getElementById("demo").innerHTML = x;
+    </script>
+  </body>
+</html>
+
+<!DOCTYPE html>
+<html>
+  <body>
+    <p>
+      A typical arithmetic operation takes two numbers (or variables) and
+      produces a new number.
+    </p>
+
+    <p id="demo"></p>
+
+    <script>
+      var a = 100;
+      var b = 50;
+      var x = a + b;
+      document.getElementById("demo").innerHTML = x;
+    </script>
+  </body>
+</html>
+
+<!-- Operators and Operands
+The numbers (in an arithmetic operation) are called operands.
+
+The operation (to be performed between the two operands) is defined by an operator.
+
+Operand	Operator	Operand
+100	+	50 -->
+
+<!-- Adding
+The addition operator (+) adds numbers:
+
+Example -->
+
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2>The + Operator</h2>
+
+    <p id="demo"></p>
+
+    <script>
+      var x = 5;
+      var y = 2;
+      var z = x + y;
+      document.getElementById("demo").innerHTML = z;
+    </script>
+  </body>
+</html>
+
+<!-- Subtracting
+The subtraction operator (-) subtracts numbers.
+
+Example -->
+
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2>The - Operator</h2>
+
+    <p id="demo"></p>
+
+    <script>
+      var x = 5;
+      var y = 2;
+      var z = x - y;
+      document.getElementById("demo").innerHTML = z;
+    </script>
+  </body>
+</html>
+
+<!-- Multiplying
+The multiplication operator (*) multiplies numbers.
+
+Example -->
+
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2>The * Operator</h2>
+
+    <p id="demo"></p>
+
+    <script>
+      var x = 5;
+      var y = 2;
+      var z = x * y;
+      document.getElementById("demo").innerHTML = z;
+    </script>
+  </body>
+</html>
+
+<!-- Dividing
+The division operator (/) divides numbers.
+
+Example -->
+
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2>The / Operator</h2>
+
+    <p id="demo"></p>
+
+    <script>
+      var x = 5;
+      var y = 2;
+      var z = x / y;
+      document.getElementById("demo").innerHTML = z;
+    </script>
+  </body>
+</html>
+
+<!-- Remainder
+The modulus operator (%) returns the division remainder.
+
+Example -->
+
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2>The % Operator</h2>
+
+    <p id="demo"></p>
+
+    <script>
+      var x = 5;
+      var y = 2;
+      var z = x % y;
+      document.getElementById("demo").innerHTML = z;
+    </script>
+  </body>
+</html>
+
+<!-- Operator Precedence
+Operator precedence describes the order in which operations are performed in an arithmetic expression.
+
+Example -->
+
+<!DOCTYPE html>
+<html>
+  <body>
+    <p>Multiplication has precedence over addition.</p>
+
+    <p id="demo"></p>
+
+    <script>
+      document.getElementById("demo").innerHTML = 100 + 50 * 3;
+    </script>
+  </body>
+</html>
+
+<!-- When using parentheses, the operations inside the parentheses are computed first.
+
+When many operations have the same precedence (like addition and subtraction), they are computed from left to right:
+
+Example -->
+
+<!DOCTYPE html>
+<html>
+  <body>
+    <p>
+      When many operations has the same precedence, they are computed from left
+      to right.
+    </p>
+
+    <p id="demo"></p>
+
+    <script>
+      document.getElementById("demo").innerHTML = 100 + 50 - 3;
+    </script>
+  </body>
+</html>

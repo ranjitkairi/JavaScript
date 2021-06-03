@@ -1,0 +1,100 @@
+<!-- Boolean Values
+Very often, in programming, you will need a data type that can only have one of two values, like
+
+YES / NO
+ON / OFF
+TRUE / FALSE
+For this, JavaScript has a Boolean data type. It can only take the values true or false.
+
+The Boolean() Function
+You can use the Boolean() function to find out if an expression (or a variable) is true:
+
+Example -->
+
+<!DOCTYPE html>
+<html>
+  <body>
+    <p>Display the value of 10 > 9:</p>
+
+    <button onclick="myFunction()">Try it</button>
+
+    <p id="demo"></p>
+
+    <script>
+      function myFunction() {
+        document.getElementById("demo").innerHTML = 10 > 9;
+      }
+    </script>
+  </body>
+</html>
+
+<!-- Comparisons and Conditions
+The chapter JS Comparisons gives a full overview of comparison operators.
+
+The chapter JS Conditions gives a full overview of conditional statements.
+
+Here are some examples:
+
+Operator	Description	Example
+==	equal to	if (day == "Monday")
+>	greater than	if (salary > 9000)
+<	less than	if (age < 18) -->
+
+<!-- Everything With a "Value" is True
+Examples -->
+
+<!DOCTYPE html>
+<html>
+  <body>
+    <p id="demo"></p>
+
+    <script>
+      var b1 = Boolean(100);
+      var b2 = Boolean(3.14);
+      var b3 = Boolean(-15);
+      var b4 = Boolean("Hello");
+      var b5 = Boolean("false");
+      var b6 = Boolean(1 + 7 + 3.14);
+
+      document.getElementById("demo").innerHTML =
+        "100 is " +
+        b1 +
+        "<br>" +
+        "3.14 is " +
+        b2 +
+        "<br>" +
+        "-15 is " +
+        b3 +
+        "<br>" +
+        "Any (not empty) string is " +
+        b4 +
+        "<br>" +
+        "Even the string 'false' is " +
+        b5 +
+        "<br>" +
+        "Any expression (except zero) is " +
+        b6;
+    </script>
+  </body>
+</html>
+
+<!-- Everything Without a "Value" is False
+The Boolean value of 0 (zero) is false: -->
+
+<!DOCTYPE html>
+<html>
+  <body>
+    <p>Display the Boolean value of 0:</p>
+
+    <button onclick="myFunction()">Try it</button>
+
+    <p id="demo"></p>
+
+    <script>
+      function myFunction() {
+        var x = 0;
+        document.getElementById("demo").innerHTML = Boolean(x);
+      }
+    </script>
+  </body>
+</html>

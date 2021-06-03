@@ -1,0 +1,41 @@
+<!-- The "use strict" Directive
+The "use strict" directive was new in ECMAScript version 5.
+
+It is not a statement, but a literal expression, ignored by earlier versions of JavaScript.
+
+The purpose of "use strict" is to indicate that the code should be executed in "strict mode".
+
+With strict mode, you can not, for example, use undeclared variables.
+ -->
+
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2>With "use strict":</h2>
+    <h3>Using a variable without declaring it, is not allowed.</h3>
+
+    <p>Activate debugging in your browser (F12) to see the error report.</p>
+
+    <script>
+      "use strict";
+      x = 3.14; // This will cause an error (x is not defined).
+    </script>
+  </body>
+</html>
+
+
+<!-- Future Proof!
+Keywords reserved for future JavaScript versions can NOT be used as variable names in strict mode.
+
+These are:
+
+implements
+interface
+let
+package
+private
+protected
+public
+static
+yield -->
+

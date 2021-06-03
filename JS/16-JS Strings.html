@@ -1,0 +1,124 @@
+<!-- JavaScript Strings
+
+You can use single or double quotes: -->
+
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2>JavaScript Strings</h2>
+
+    <p>
+      Strings are written inside quotes. You can use single or double quotes:
+    </p>
+
+    <p id="demo"></p>
+
+    <script>
+      var carName1 = "Volvo XC60"; // Double quotes
+      var carName2 = "Volvo XC60"; // Single quotes
+
+      document.getElementById("demo").innerHTML = carName1 + " " + carName2;
+    </script>
+  </body>
+</html>
+
+<!-- You can use quotes inside a string, as long as they don't match the quotes surrounding the string: -->
+
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2>JavaScript Strings</h2>
+
+    <p>
+      You can use quotes inside a string, as long as they don't match the quotes
+      surrounding the string.
+    </p>
+
+    <p id="demo"></p>
+
+    <script>
+      var answer1 = "It's alright";
+      var answer2 = "He is called 'Johnny'";
+      var answer3 = 'He is called "Johnny"';
+
+      document.getElementById("demo").innerHTML =
+        answer1 + "<br>" + answer2 + "<br>" + answer3;
+    </script>
+  </body>
+</html>
+
+<!-- String Length
+To find the length of a string, use the built-in length property: -->
+
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2>JavaScript String Properties</h2>
+
+    <p>The length property returns the length of a string:</p>
+
+    <p id="demo"></p>
+
+    <script>
+      var txt = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+      var sln = txt.length;
+      document.getElementById("demo").innerHTML = sln;
+    </script>
+  </body>
+</html>
+
+<!-- The string will be chopped to "We are the so-called ".
+
+The solution to avoid this problem, is to use the backslash escape character.
+
+The backslash (\) escape character turns special characters into string characters:
+
+Code	Result	Description
+\'	'	Single quote
+\"	"	Double quote
+\\	\	Backslash
+The sequence \"  inserts a double quote in a string: -->
+
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2>JavaScript Strings</h2>
+
+    <p>The escape sequence \" inserts a double quote in a string.</p>
+
+    <p id="demo"></p>
+
+    <script>
+      var x = 'We are the so-called "Vikings" from the north.';
+      document.getElementById("demo").innerHTML = x;
+    </script>
+  </body>
+</html>
+
+<!-- The sequence \\  inserts a backslash in a string: -->
+
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2>JavaScript Strings</h2>
+
+    <p>The escape sequence \\ inserts a backslash in a string.</p>
+
+    <p id="demo"></p>
+
+    <script>
+      var x = "The character \\ is called backslash.";
+      document.getElementById("demo").innerHTML = x;
+    </script>
+  </body>
+</html>
+
+<!-- Six other escape sequences are valid in JavaScript:
+
+Code	Result
+\b	Backspace
+\f	Form Feed
+\n	New Line
+\r	Carriage Return
+\t	Horizontal Tabulator
+\v	Vertical Tabulator -->

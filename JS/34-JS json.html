@@ -1,0 +1,48 @@
+<!-- What is JSON?
+JSON stands for JavaScript Object Notation
+JSON is a lightweight data interchange format
+JSON is language independent *
+JSON is "self-describing" and easy to understand
+* The JSON syntax is derived from JavaScript object notation syntax, but the JSON format is text only. Code for reading and generating JSON data can be written in any programming language.
+
+JSON Example
+This JSON syntax defines an employees object: an array of 3 employee records (objects):
+
+JSON Example
+{
+"employees":[
+  {"firstName":"John", "lastName":"Doe"},
+  {"firstName":"Anna", "lastName":"Smith"},
+  {"firstName":"Peter", "lastName":"Jones"}
+]
+} -->
+
+<!-- JSON Objects
+JSON objects are written inside curly braces.
+
+Just like in JavaScript, objects can contain multiple name/value pairs:
+
+{"firstName":"John", "lastName":"Doe"} -->
+
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2>Create Object from JSON String</h2>
+
+    <p id="demo"></p>
+
+    <script>
+      var text =
+        '{"employees":[' +
+        '{"firstName":"John","lastName":"Doe" },' +
+        '{"firstName":"Anna","lastName":"Smith" },' +
+        '{"firstName":"Peter","lastName":"Jones" }]}';
+
+      obj = JSON.parse(text);
+      document.getElementById("demo").innerHTML =
+        obj.employees[1].firstName + " " + obj.employees[1].lastName;
+    </script>
+  </body>
+</html>
+
+

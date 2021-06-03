@@ -1,0 +1,73 @@
+<!-- JavaScript Declarations are Hoisted
+In JavaScript, a variable can be declared after it has been used.
+
+In other words; a variable can be used before it has been declared.
+
+Example 1 gives the same result as Example 2:
+
+Example 1 -->
+
+<!DOCTYPE html>
+<html>
+  <body>
+    <p id="demo"></p>
+
+    <script>
+      x = 5; // Assign 5 to x
+
+      elem = document.getElementById("demo"); // Find an element
+      elem.innerHTML = x; // Display x in the element
+
+      var x; // Declare x
+    </script>
+  </body>
+</html>
+
+<!-- The let and const Keywords
+Variables defined with let and const are hoisted to the top of the block, but not initialized.
+
+Meaning: The block of code is aware of the variable, but it cannot be used until it has been declared.
+
+Using a let variable before it is declared will result in a ReferenceError.
+
+The variable is in a "temporal dead zone" from the start of the block until it is declared:
+
+Example
+This will result in a ReferenceError: -->
+
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2>JavaScript Hoisting</h2>
+    <p>With <b>let</b>, you cannot use a variable before it is declared.</p>
+    <p id="demo"></p>
+
+    <script>
+      try {
+        carName = "Saab";
+        let carName = "Volvo";
+      } catch (err) {
+        document.getElementById("demo").innerHTML = err;
+      }
+    </script>
+  </body>
+</html>
+
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2>JavaScript Hoisting</h2>
+
+    <p>With <b>const</b>, you cannot use a variable before it is declared.</p>
+    <p>Try to remove the //.</p>
+
+    <p id="demo"></p>
+
+    <script>
+      carName = "Volvo";
+      //const carName;
+      document.getElementById("demo").innerHTML = carName;
+    </script>
+  </body>
+</html>
+

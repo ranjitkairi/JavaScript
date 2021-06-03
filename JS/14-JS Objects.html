@@ -1,0 +1,103 @@
+<!-- JavaScript Objects
+Real Life Objects, Properties, and Methods
+In real life, a car is an object.
+
+A car has properties like weight and color, and methods like start and stop:
+
+Object	Properties	Methods
+	
+car.name = Fiat
+
+car.model = 500
+
+car.weight = 850kg
+
+car.color = white	
+car.start()
+
+car.drive()
+
+car.brake()
+
+car.stop()
+All cars have the same properties, but the property values differ from car to car.
+
+All cars have the same methods, but the methods are performed at different times.
+ -->
+
+<!-- JavaScript Objects
+You have already learned that JavaScript variables are containers for data values.
+
+This code assigns a simple value (Fiat) to a variable named car:
+ -->
+
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2>JavaScript Variables</h2>
+
+    <p id="demo"></p>
+
+    <script>
+      // Create and display a variable:
+      var car = "Fiat";
+      document.getElementById("demo").innerHTML = car;
+    </script>
+  </body>
+</html>
+<!-- 
+This code assigns many values (Fiat, 500, white) to a variable named car:
+ -->
+
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2>JavaScript Objects</h2>
+
+    <p id="demo"></p>
+
+    <script>
+      // Create an object:
+      var car = { type: "Fiat", model: "500", color: "white" };
+
+      // Display some data from the object:
+      document.getElementById("demo").innerHTML = "The car type is " + car.type;
+    </script>
+  </body>
+</html>
+
+<!-- Object Definition
+You define (and create) a JavaScript object with an object literal:
+
+Example -->
+
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2>JavaScript Objects</h2>
+
+    <p id="demo"></p>
+
+    <script>
+      // Create an object:
+      var person = {
+        firstName: "John",
+        lastName: "Doe",
+        age: 50,
+        eyeColor: "blue",
+      };
+
+      // Display some data from the object:
+      document.getElementById("demo").innerHTML =
+        person.firstName + " is " + person.age + " years old.";
+    </script>
+  </body>
+</html>
+
+<!-- Do Not Declare Strings, Numbers, and Booleans as Objects!
+When a JavaScript variable is declared with the keyword "new", the variable is created as an object:
+
+var x = new String();        // Declares x as a String object
+var y = new Number();        // Declares y as a Number object
+var z = new Boolean();       // Declares z as a Boolean object -->
+
